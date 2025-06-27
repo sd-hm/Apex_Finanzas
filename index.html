@@ -155,8 +155,8 @@
                         </div>
                     </div>
 
-                    <!-- Navbar sticky con margen superior -->
-                    <nav class="sticky top-0 z-40 bg-white shadow-md md:mt-[50px]">
+                    <!-- Navbar sticky que se ajusta dinámicamente -->
+                    <nav id="navbar" class="fixed top-0 lg:top-[50px] z-40 w-full bg-white shadow-md transition-all duration-300 ease-in-out">
                         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
                             <div class="flex justify-between items-center">
                                 
@@ -243,20 +243,25 @@
                 
                 document.getElementById('header').innerHTML = headerContent;
 
-                // Funcionalidad del scroll para ocultar/mostrar la barra superior
+                // Funcionalidad del scroll para ocultar/mostrar la barra superior y ajustar navbar
                 let lastScrollTop = 0;
                 const topBar = document.getElementById('top-info-bar');
+                const navbar = document.getElementById('navbar');
                 
                 window.addEventListener('scroll', function() {
                     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                     
-                    if (topBar) {
+                    if (topBar && navbar) {
                         if (scrollTop > 10) {
+                            // Ocultar barra superior y mover navbar al top
                             topBar.style.transform = 'translateY(-100%)';
-                            topBar.style.transition = 'transform 0.3s ease-in-out';
+                            navbar.style.top = '0';
                         } else {
+                            // Mostrar barra superior y mover navbar debajo de ella
                             topBar.style.transform = 'translateY(0)';
-                            topBar.style.transition = 'transform 0.3s ease-in-out';
+                            if (window.innerWidth >= 1024) { // lg breakpoint
+                                navbar.style.top = '50px';
+                            }
                         }
                     }
                     
@@ -292,6 +297,20 @@
                         });
                     });
                 }
+
+                // Ajustar posición inicial del navbar según el tamaño de pantalla
+                function adjustNavbarPosition() {
+                    const navbar = document.getElementById('navbar');
+                    if (navbar && window.innerWidth >= 1024) {
+                        navbar.style.top = '50px';
+                    } else if (navbar) {
+                        navbar.style.top = '0';
+                    }
+                }
+
+                // Ejecutar al cargar y al redimensionar
+                adjustNavbarPosition();
+                window.addEventListener('resize', adjustNavbarPosition);
             }
 
             async loadFooter() {
