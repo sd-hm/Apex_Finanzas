@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -187,20 +186,12 @@
                                             Nosotros
                                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                                         </button>
-                                        <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="constitucion">
-                                            Constitución
-                                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
-                                        </button>
                                         <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="servicio-contable">
                                             Servicios
                                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                                         </button>
-                                        <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="facturacion">
-                                            Facturación
-                                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
-                                        </button>
-                                        <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="blog">
-                                            Blog
+                                        <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="motivo  ">
+                                            Porque elegirnos?
                                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                                         </button>
                                         <button class="nav-link px-3 xl:px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-sm xl:text-base font-medium relative group" data-page="contacto">
@@ -481,7 +472,7 @@
                     </style>
                     
                     <!-- SECCIÓN HERO CON IMAGEN -->
-                    <div class="hero-container relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+                    <div id="inicio-section" class="hero-container relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
                         <img 
                             src="./assets/images/portada.jpg" 
                             class="absolute inset-0 w-full h-full object-cover"
@@ -519,7 +510,7 @@
                     </div>
 
                     <!-- SECCIÓN MEJORADA CON DISEÑO MODERNO -->
-                    <div class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50 to-white overflow-hidden">
+                    <div id="nosotros-section" class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50 to-white overflow-hidden">
                         <!-- Elementos decorativos de fondo -->
                         <div class="absolute inset-0 overflow-hidden">
                             <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -741,7 +732,7 @@
                     </style>
 
                         <!-- Sección de 3 Servicios Básicos -->
-    <div class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
+    <div id="servicio-section"class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
         <!-- Elementos decorativos de fondo -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
@@ -909,7 +900,7 @@
                 </style>
 
                 <!-- Sección ¿Por qué escoger Sercofi? -->
-                    <section class="bg-gradient-sercofi py-20">
+                    <div id="motivo-section" class="bg-gradient-sercofi py-20">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <!-- Header de la sección -->
                             <div class="text-center mb-16">
@@ -1041,51 +1032,9 @@
                             </div>
 
                         </div>
-                    </section>
+                    </div>
 
-                `;
-                document.getElementById('inicio').innerHTML = content;
-            }
-
-
-            async loadNosotros() {
-                const content = `
-                    
-                `;
-                document.getElementById('nosotros').innerHTML = content;
-            }
-
-            async loadConstitucion() {
-                const content = `
-                    
-                `;
-                document.getElementById('constitucion').innerHTML = content;
-            }
-
-            async loadServicioContable() {
-                const content = `
-                    
-                `;
-                document.getElementById('servicio-contable').innerHTML = content;
-            }
-
-            async loadFacturacion() {
-                const content = `
-                    
-                `;
-                document.getElementById('facturacion').innerHTML = content;
-            }
-
-            async loadBlog() {
-                const content = `
-                    
-                `;
-                document.getElementById('blog').innerHTML = content;
-            }
-
-            async loadContacto() {
-                const content = `
-                    <div class="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative"
+                    <div id="contacto-section" class="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative"
                         style="background-image: url('./assets/images/portada.jpg'); 
                                 background-size: cover; 
                                 background-position: center; 
@@ -1202,73 +1151,153 @@
                             </div>
                         </div>
                     </div>
+
+                `;
+                document.getElementById('inicio').innerHTML = content;
+            }
+
+
+            async loadNosotros() {
+                const content = `
+                    
+                `;
+                document.getElementById('nosotros').innerHTML = content;
+            }
+
+            async loadConstitucion() {
+                const content = `
+                    
+                `;
+                document.getElementById('constitucion').innerHTML = content;
+            }
+
+            async loadServicioContable() {
+                const content = `
+                    
+                `;
+                document.getElementById('servicio-contable').innerHTML = content;
+            }
+
+            async loadFacturacion() {
+                const content = `
+                    
+                `;
+                document.getElementById('facturacion').innerHTML = content;
+            }
+
+            async loadBlog() {
+                const content = `
+                    
+                `;
+                document.getElementById('blog').innerHTML = content;
+            }
+
+            async loadContacto() {
+                const content = `
                 `;
                 document.getElementById('contacto').innerHTML = content;
             }
 
             setupNavigation() {
-                // Event listeners para navegación
-                document.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('nav-link')) {
-                        const page = e.target.dataset.page;
-                        this.navigateTo(page);
-                    }
-                });
-
-                // Mobile menu toggle
-                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                
-                mobileMenuBtn?.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-
-                // Contact form submission
-                document.addEventListener('submit', (e) => {
-                    if (e.target.id === 'contact-form') {
-                        e.preventDefault();
-                        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-                        e.target.reset();
-                    }
-                });
-
-                // Set initial active state
-                this.updateActiveNavigation();
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('nav-link')) {
+            const page = e.target.dataset.page;
+            
+            // Si es "nosotros", ir a la sección dentro de "inicio"
+            if (page === 'nosotros') {
+                this.scrollToSection('inicio', 'nosotros-section');
+            } else if (page === 'servicio-contable') {
+                this.scrollToSection('inicio', 'servicio-section');
+            } else if (page === 'motivo') {
+                this.scrollToSection('inicio', 'motivo-section');
+            } else if (page === 'contacto') {
+                this.scrollToSection('inicio', 'contacto-section');
+            } else if (page === 'inicio') {
+                this.scrollToSection('inicio', 'inicio-section');
+            }else {
+                this.navigateTo(page);
             }
+        }
+    });
 
-            navigateTo(page) {
-                // Hide all sections
-                document.querySelectorAll('.page-section').forEach(section => {
-                    section.classList.remove('active');
-                });
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
-                // Show target section
-                const targetSection = document.getElementById(page);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                    this.currentPage = page;
-                    this.updateActiveNavigation();
-                    
-                    // Scroll to top
-                    window.scrollTo(0, 0);
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    mobileMenu?.classList.add('hidden');
-                }
-            }
+    // Contact form submission
+    document.addEventListener('submit', (e) => {
+        if (e.target.id === 'contact-form') {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+            e.target.reset();
+        }
+    });
 
-            updateActiveNavigation() {
-                // Remove active class from all nav links
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
+    // Set initial active state
+    this.updateActiveNavigation();
+}
 
-                // Add active class to current page links
-                document.querySelectorAll(`[data-page="${this.currentPage}"]`).forEach(link => {
-                    link.classList.add('active');
-                });
-            }
+navigateTo(page) {
+    // Hide all sections
+    document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('active');
+    });
+
+    // Show target section
+    const targetSection = document.getElementById(page);
+    if (targetSection) {
+        targetSection.classList.add('active');
+        this.currentPage = page;
+        this.updateActiveNavigation();
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+        
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu?.classList.add('hidden');
+    }
+}
+
+updateActiveNavigation() {
+    // Remove active class from all nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to current page links
+    document.querySelectorAll(`[data-page="${this.currentPage}"]`).forEach(link => {
+        link.classList.add('active');
+    });
+}
+
+// NUEVAS FUNCIONES - Añadir después de updateActiveNavigation()
+scrollToSection(page, sectionId) {
+    // Primero asegurarse de estar en la página correcta
+    if (this.currentPage !== page) {
+        this.navigateTo(page);
+        // Esperar un poco para que la página se cargue
+        setTimeout(() => {
+            this.scrollToElement(sectionId);
+        }, 150);
+    } else {
+        this.scrollToElement(sectionId);
+    }
+}
+
+scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
         }
 
         // Initialize the navigation system when page loads
@@ -1286,7 +1315,6 @@
         <i class="fab fa-whatsapp fa-2x"></i>
     </a>
 
-
-
+    
 </body>
 </html>
