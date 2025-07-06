@@ -1,0 +1,4 @@
+# robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://sd-hm.github.io/Apex_Finanzas/sitemap.xml
